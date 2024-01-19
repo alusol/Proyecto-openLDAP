@@ -1,0 +1,66 @@
+# UOs de departamentos
+dn: ou=depInformatica,dc=Laplana,dc=mylocal
+objectClass: organizationalUnit 
+ou: depInformatica
+
+dn: ou=depEnfermeria,dc=Laplana,dc=mylocal
+objectClass: organizationalUnit
+ou: depEnfermeria
+
+dn: ou=depPrensa,dc=Laplana,dc=mylocal
+objectClass: organizationalUnit
+ou: depPrensa
+# Uos de grupos
+dn: cn=GGInformatica,ou=depInformatica,dc=Laplana,dc=mylocal
+objectClass: posixGroup
+cn: GGInformatica
+gidNumber: 5001
+
+dn: cn=GGEnfermeria,ou=depEnfermeria,dc=Laplana,dc=mylocal
+objectClass: posixGroup
+cn: GGEnfermeria
+gidNumber: 5002
+
+dn: cn=GGPrensa,ou=depPrensa,dc=Laplana,dc=mylocal
+objectClass: posixGroup
+cn: GGPrensa
+gidNumber: 5003
+# Uos de usuarios
+dn: uid=LuisNavarroRuiz,ou=depInformatica,dc=Laplana,dc=mylocal
+cn: LuisNavarroRuiz
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uidNumber:10000
+gidNumber:5000
+sn: Lnavarror
+userPassword: {SSHA}̣RifeOHKtMwX1SHL9X+0k+pFcRlYuJUL+
+homeDirectory: /home/Lnavarror
+displayName: Usuario01_Informatica
+loginShell:/bin/bash
+
+dn: uid=SusanaAlabauSancho,ou=depEnfermeria,dc=Laplana,dc=mylocal
+cn: SusanaAlabauSancho
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uidNumber:10001
+gidNumber:5001
+sn: Salabaus
+userPassword: {SSHA}̣RifeOHKtMwX1SHL9X+0k+pFcRlYuJUL+
+homeDirectory: /home/Salabaus
+displayName: Usuario01_Enfermeria
+loginShell:/bin/bash
+
+dn: uid=PedroGomisZambujo,ou=depPrensa,dc=Laplana,dc=mylocal
+cn: PedroGomisZambujo
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uidNumber:10002
+gidNumber:5002
+sn: Pgomisz
+userPassword: {SSHA}̣RifeOHKtMwX1SHL9X+0k+pFcRlYuJUL+
+homeDirectory: /home/Pgomisz
+displayName: Usuario01_Prensa
+loginShell:/bin/bash
